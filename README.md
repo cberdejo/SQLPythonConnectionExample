@@ -1,7 +1,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 # Project Title: Oracle Database Setup Script
-This project contains a Python script to set up an Oracle database schema with predefined tables, constraints, and sample data. The script uses oracledb and dotenv for database connection and environment variable management.
+This project contains  Python scripts to set up an Oracle database schema with predefined tables, constraints, and sample data. The script uses oracledb and dotenv for database connection and environment variable management. One of the scripts is with raw sql, the other one is using an ORM.
 
 
 ![Schema](https://github.com/cberdejo/OracleSqlConnectionExample/blob/main/schema.png)
@@ -39,7 +39,7 @@ Create a `.env` file based on the `env.template` file provided in the project.
 
 ## Execute the script:
 
-Use `python conn_oracle.py`
+Use `python conn_oracle.py` or `python conn_oracle_orm.py `
 
 
 
