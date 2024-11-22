@@ -1,8 +1,10 @@
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 # Project Title: Oracle Database Setup Script
 This project contains a Python script to set up an Oracle database schema with predefined tables, constraints, and sample data. The script uses oracledb and dotenv for database connection and environment variable management.
 
 
-![Schema](https://github.com/[cberdejo]/[OracleSqlConnectionExample]/blob/[main]/schema.png?raw=true)
+![Schema](https://github.com/cberdejo/OracleSqlConnectionExample/blob/main/schema.png)
 
 ## Features
 - Database Initialization: Drops existing tables and creates new ones.
