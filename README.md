@@ -20,7 +20,11 @@ Ensure Python is installed.
 ### 2. Install required packages:
 
 
-Copiar código: `pip install -r requirements.txt`
+Copiar código:
+``` sh 
+    `pip install -r requirements.txt`
+```
+
 
 
 ### 3. Environment Variables:
@@ -31,18 +35,28 @@ Create a `.env` file based on the `env.template` file provided in the project.
 
 #### Define the following variables:
 
-- ORACLE_USER=<your_oracle_user>
-- ORACLE_PASSWORD=<your_oracle_password>
-- ORACLE_HOSTNAME=<your_oracle_hostname>
-- ORACLE_SID=<your_oracle_sid>
+- DB_USER=<your_db_user>
+- DB_PASSWORD=<your_db_password>
+- DB_HOSTNAME=<your_db_hostname>
+- DB_SID=<your_db_sid>
+- DB_PORT=<your_port>
 
+### Image PostreSQL 
+if needed, it is possible to use a local DB:
+``` sh 
+    $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=departements -p 5432:5432 postgres
+
+```
 
 ## Execute the script:
-
-Use `python conn_oracle.py` or `python conn_oracle_orm.py `
-
-
-
+Use 
+``` sh 
+python conn.py
+```
+or 
+``` sh 
+python conn_orm.py
+```
 
 ## LICENSE: MIT License file.
 License

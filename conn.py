@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-username = os.getenv("ORACLE_USER")
-password = os.getenv("ORACLE_PASSWORD")
-hostname = os.getenv("ORACLE_HOSTNAME")
-sid = os.getenv("ORACLE_SID")
+username = os.getenv("USER")
+password = os.getenv("PASSWORD")
+hostname = os.getenv("HOSTNAME")
+sid = os.getenv("SID")
 
 connection = oracledb.connect(user=username, password=password, host=hostname, sid=sid)
 cursor = connection.cursor()

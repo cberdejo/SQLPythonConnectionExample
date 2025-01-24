@@ -3,10 +3,13 @@ from sqlmodel import Field, SQLModel, Relationship
 
 # Definición de modelos para SQLModel
 
+
 class Department(SQLModel, table=True):
     dname: str = Field(..., max_length=20, unique=True)
     dnumber: int = Field(primary_key=True)
-    mgr_ssn: Optional[str] = Field(default=None, max_length=9, foreign_key="employee.ssn")
+    mgr_ssn: Optional[str] = Field(
+        default=None, max_length=9, foreign_key="employee.ssn"
+    )
     mgr_start_date: str
 
     employees: List["Employee"] = Relationship(back_populates="department")
@@ -23,7 +26,9 @@ class Employee(SQLModel, table=True):
     address: Optional[str] = Field(default=None, max_length=50)
     sex: Optional[str] = Field(default=None, max_length=1)
     salary: Optional[float] = None
-    super_ssn: Optional[str] = Field(default=None, max_length=9, foreign_key="employee.ssn")
+    super_ssn: Optional[str] = Field(
+        default=None, max_length=9, foreign_key="employee.ssn"
+    )
     dno: Optional[int] = Field(default=None, foreign_key="department.dnumber")
 
     department: Optional[Department] = Relationship(back_populates="employees")
